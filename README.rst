@@ -55,6 +55,10 @@ Goals
     branch_1
   * main
 
+  note:  i actually like using:  git branch --list  (vs git branch)
+
+  
+
 
 
 
