@@ -19,6 +19,8 @@ Goals
 
 
 
+|
+|
 
 
 
@@ -37,63 +39,139 @@ Goals
 
 
 |
+|
 
 
 
-```
-D:\GITHUB_Repos\mlb>git
-usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           <command> [<args>]
+:Info: See <http://docutils.sf.net/rst.html> for introductory docs.
+:Author: David Goodger <goodger@python.org>
+:Date: $Date: 2013-02-20 02:10:53 +0100 (Mi, 20. Feb 2013) $
+:Revision: $Revision: 7612 $
+:Description: This is a "docinfo block", or bibliographic field list
 
-These are common Git commands used in various situations:
+.. NOTE:: If you are reading this as HTML, please read
+   `<cheatsheet.txt>`_ instead to see the input syntax examples!
 
-start a working area (see also: git help tutorial)
-   clone             Clone a repository into a new directory
-   init              Create an empty Git repository or reinitialize an existing one
+Section Structure
+=================
+Section titles are underlined or overlined & underlined.
 
-work on the current change (see also: git help everyday)
-   add               Add file contents to the index
-   mv                Move or rename a file, a directory, or a symlink
-   restore           Restore working tree files
-   rm                Remove files from the working tree and from the index
-   sparse-checkout   Initialize and modify the sparse-checkout
+Body Elements
+=============
+Grid table:
 
-examine the history and state (see also: git help revisions)
-   bisect            Use binary search to find the commit that introduced a bug
-   diff              Show changes between commits, commit and working tree, etc
-   grep              Print lines matching a pattern
-   log               Show commit logs
-   show              Show various types of objects
-   status            Show the working tree status
++--------------------------------+-----------------------------------+
+| Paragraphs are flush-left,     | Literal block, preceded by "::":: |
+| separated by blank lines.      |                                   |
+|                                |     Indented                      |
+|     Block quotes are indented. |                                   |
++--------------------------------+ or::                              |
+| >>> print 'Doctest block'      |                                   |
+| Doctest block                  | > Quoted                          |
++--------------------------------+-----------------------------------+
+| | Line blocks preserve line breaks & indents. [new in 0.3.6]       |
+| |     Useful for addresses, verse, and adornment-free lists; long  |
+|       lines can be wrapped with continuation lines.                |
++--------------------------------------------------------------------+
 
-grow, mark and tweak your common history
-   branch            List, create, or delete branches
-   commit            Record changes to the repository
-   merge             Join two or more development histories together
-   rebase            Reapply commits on top of another base tip
-   reset             Reset current HEAD to the specified state
-   switch            Switch branches
-   tag               Create, list, delete or verify a tag object signed with GPG
+Simple tables:
 
-collaborate (see also: git help workflows)
-   fetch             Download objects and refs from another repository
-   pull              Fetch from and integrate with another repository or a local branch
-   push              Update remote refs along with associated objects
+================  ============================================================
+List Type         Examples (syntax in the `text source <cheatsheet.txt>`_)
+================  ============================================================
+Bullet list       * items begin with "-", "+", or "*"
+Enumerated list   1. items use any variation of "1.", "A)", and "(i)"
+                  #. also auto-enumerated
+Definition list   Term is flush-left : optional classifier
+                      Definition is indented, no blank line between
+Field list        :field name: field body
+Option list       -o  at least 2 spaces between option & description
+================  ============================================================
 
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+================  ============================================================
+Explicit Markup   Examples (visible in the `text source`_)
+================  ============================================================
+Footnote          .. [1] Manually numbered or [#] auto-numbered
+                     (even [#labelled]) or [*] auto-symbol
+Citation          .. [CIT2002] A citation.
+Hyperlink Target  .. _reStructuredText: http://docutils.sf.net/rst.html
+                  .. _indirect target: reStructuredText_
+                  .. _internal target:
+Anonymous Target  __ http://docutils.sf.net/docs/ref/rst/restructuredtext.html
+Directive ("::")  .. image:: images/biohazard.png
+Substitution Def  .. |substitution| replace:: like an inline directive
+Comment           .. is anything else
+Empty Comment     (".." on a line by itself, with blank lines before & after,
+                  used to separate indentation contexts)
+================  ============================================================
 
-```
+Inline Markup
+=============
+*emphasis*; **strong emphasis**; `interpreted text`; `interpreted text
+with role`:emphasis:; ``inline literal text``; standalone hyperlink,
+http://docutils.sourceforge.net; named reference, reStructuredText_;
+`anonymous reference`__; footnote reference, [1]_; citation reference,
+[CIT2002]_; |substitution|; _`inline internal target`.
+
+Directive Quick Reference
+=========================
+See <http://docutils.sf.net/docs/ref/rst/directives.html> for full info.
 
+================  ============================================================
+Directive Name    Description (Docutils version added to, in [brackets])
+================  ============================================================
+attention         Specific admonition; also "caution", "danger",
+                  "error", "hint", "important", "note", "tip", "warning"
+admonition        Generic titled admonition: ``.. admonition:: By The Way``
+image             ``.. image:: picture.png``; many options possible
+figure            Like "image", but with optional caption and legend
+topic             ``.. topic:: Title``; like a mini section
+sidebar           ``.. sidebar:: Title``; like a mini parallel document
+parsed-literal    A literal block with parsed inline markup
+rubric            ``.. rubric:: Informal Heading``
+epigraph          Block quote with class="epigraph"
+highlights        Block quote with class="highlights"
+pull-quote        Block quote with class="pull-quote"
+compound          Compound paragraphs [0.3.6]
+container         Generic block-level container element [0.3.10]
+table             Create a titled table [0.3.1]
+list-table        Create a table from a uniform two-level bullet list [0.3.8]
+csv-table         Create a table from CSV data [0.3.4]
+contents          Generate a table of contents
+sectnum           Automatically number sections, subsections, etc.
+header, footer    Create document decorations [0.3.8]
+target-notes      Create an explicit footnote for each external target
+math              Mathematical notation (input in LaTeX format)
+meta              HTML-specific metadata
+include           Read an external reST file as if it were inline
+raw               Non-reST data passed untouched to the Writer
+replace           Replacement text for substitution definitions
+unicode           Unicode character code conversion for substitution defs
+date              Generates today's date; for substitution defs
+class             Set a "class" attribute on the next element
+role              Create a custom interpreted text role [0.3.2]
+default-role      Set the default interpreted text role [0.3.10]
+title             Set the metadata document title [0.3.10]
+================  ============================================================
 
+Interpreted Text Role Quick Reference
+=====================================
+See <http://docutils.sf.net/docs/ref/rst/roles.html> for full info.
 
-
-
+================  ============================================================
+Role Name         Description
+================  ============================================================
+emphasis          Equivalent to *emphasis*
+literal           Equivalent to ``literal`` but processes backslash escapes
+math              Mathematical notation (input in LaTeX format)
+PEP               Reference to a numbered Python Enhancement Proposal
+RFC               Reference to a numbered Internet Request For Comments
+raw               For non-reST data; cannot be used directly (see docs) [0.3.6]
+strong            Equivalent to **strong**
+sub               Subscript
+sup               Superscript
+title             Title reference (book, etc.); standard default role
+================  ============================================================
 
 
 
