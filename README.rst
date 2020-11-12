@@ -46,8 +46,22 @@ Goals
 
 ::
 
-  D:\GITHUB_Repos\mlb>git branch
-  * main   # ok, only have one branch right now... 
+  D:\GITHUB_Repos\mlb>git branch  # i only have one branch right now 
+  * main  
+
+  D:\GITHUB_Repos\mlb>git branch branch_1
+  D:\GITHUB_Repos\mlb>
+  D:\GITHUB_Repos\mlb>
+  D:\GITHUB_Repos\mlb>git branch   # now i have a new one... 
+    branch_1
+  * main
+
+
+
+
+
+
+
 
 
 
