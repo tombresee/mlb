@@ -42,15 +42,13 @@ Goals
 |
 
 
-
 :Info: See <http://docutils.sf.net/rst.html> for introductory docs.
-:Author: David Goodger <goodger@python.org>
-:Date: $Date: 2013-02-20 02:10:53 +0100 (Mi, 20. Feb 2013) $
-:Revision: $Revision: 7612 $
-:Description: This is a "docinfo block", or bibliographic field list
+:Author: T 
+:Date: $Date: 2020-02-20 02:10:53 +0100 (Mi, 20. Feb 2013) $
+:Revision: $Revision: 12345 $
+:Description: T
 
-.. NOTE:: If you are reading this as HTML, please read
-   `<cheatsheet.txt>`_ instead to see the input syntax examples!
+
 
 Section Structure
 =================
@@ -88,6 +86,7 @@ Field list        :field name: field body
 Option list       -o  at least 2 spaces between option & description
 ================  ============================================================
 
+
 ================  ============================================================
 Explicit Markup   Examples (visible in the `text source`_)
 ================  ============================================================
@@ -105,17 +104,9 @@ Empty Comment     (".." on a line by itself, with blank lines before & after,
                   used to separate indentation contexts)
 ================  ============================================================
 
-Inline Markup
-=============
-*emphasis*; **strong emphasis**; `interpreted text`; `interpreted text
-with role`:emphasis:; ``inline literal text``; standalone hyperlink,
-http://docutils.sourceforge.net; named reference, reStructuredText_;
-`anonymous reference`__; footnote reference, [1]_; citation reference,
-[CIT2002]_; |substitution|; _`inline internal target`.
-
+
 Directive Quick Reference
 =========================
-See <http://docutils.sf.net/docs/ref/rst/directives.html> for full info.
 
 ================  ============================================================
 Directive Name    Description (Docutils version added to, in [brackets])
@@ -156,7 +147,6 @@ title             Set the metadata document title [0.3.10]
 
 Interpreted Text Role Quick Reference
 =====================================
-See <http://docutils.sf.net/docs/ref/rst/roles.html> for full info.
 
 ================  ============================================================
 Role Name         Description
