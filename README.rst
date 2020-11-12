@@ -1,11 +1,9 @@
 
-
 mlb
 ######
 
 |
 |
-
 
 
 
@@ -62,15 +60,9 @@ Goals
     Your branch is up to date with 'origin/main'.
 
 
+  Show:  I work on a branch, and now need to merge it with the *main* code base... 
 
-
-
-
-
-
-
-
-
+  
 
 
 
