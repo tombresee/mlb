@@ -57,7 +57,12 @@ Goals
 
   note:  i actually like using:  git branch --list  (vs git branch)
 
-  
+  D:\GITHUB_Repos\mlb>git checkout main
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+
+
+
 
 
 
@@ -75,6 +80,9 @@ Goals
 
 
 |
+|
+|
+
 
 
 
