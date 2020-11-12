@@ -42,17 +42,17 @@ Goals
 |
 
 
+
+
 ::
 
-  git checkout -b branch_1 is the same thing as:
-  git branch branch_1    (create)
-  git checkout branch_1  (switch to)
+  D:\GITHUB_Repos\mlb>git branch
+  * main   # ok, only have one branch right now... 
 
 
-  # switch to a branch: 
-  git checkout branch_2
 
-  git checkout main (not master anymore!)
+
+
 
 
 
